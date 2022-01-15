@@ -21,7 +21,7 @@ var lowerCaseArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l"
 
 var numberArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
-var specialCharacterArray = ["!", "?", "$", "#", "*", "^",]
+var specialCharacterArray = [ "!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[",  "]", "^", "_", "`", "{", "|",  "}", "~",]
 
 //Array that collects all other arrays for random selection
 var selectedArray = []
@@ -30,22 +30,38 @@ var selectedArray = []
 // if statements that ask if you want to use the above arrays for the password
 if(addUpperCase) {
   selectedArray = selectedArray.concat(upperCaseArray);
+  window.alert("Uppercase will be used");
+}
+else {
+  window.alert("uppercase will not be used");
 }
 
 if(addLowerCase) {
   selectedArray = selectedArray.concat(lowerCaseArray);
+  window.alert("Lowercase will be used");
+}
+else {
+  window.alert("Lowercase will not be used");
 }
 
 if(addNumber) {
   selectedArray = selectedArray.concat(numberArray);
+  window.alert("Number will be used");
+}
+else {
+  window.alert("Numbers will not be used");
 }
 
 if(addSpecialCharacter) {
   selectedArray = selectedArray.concat(specialCharacterArray);
+  window.alert("Special character will be used");
+}
+else {
+  window.alert("Special characters will not be used");
 }
 
 
-// Displays the contents of the collective array.
+// Displays the contents of the selected array after choosing.
 console.log(selectedArray)
 
 
@@ -69,6 +85,7 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
+
 
 }
 
